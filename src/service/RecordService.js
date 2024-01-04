@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const BASE_URL = "http://34.239.137.242:8085/record";
-// const BASE_URL = "http://localhost:8085/record";
+// const BASE_URL = "http://34.239.137.242:8085/record";
+const BASE_URL = "http://localhost:8085/record";
 
 class RecordService{
     getAllRecord(){
