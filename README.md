@@ -1,4 +1,4 @@
-# FinalOOProject - Work Tracker App
+# FinalOOProject + WEB - Work Tracker App
 
 ## Overview
 
