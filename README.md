@@ -4,10 +4,6 @@
 
 This Full Stack Project, Work Tracker App, is an implementation of the existing frontend project, "Work Time Tracker App." This project introduces a backend that includes functionalities such as managing records and staff, and providing operations for creating, updating, and deleting records and staff members.
 
-## Video Demonstration
-
-For a detailed walkthrough and demonstration, watch the [Video Demo](#) [Link to be replaced with the actual link].
-
 ## Getting Started (Frontend)
 
 1. Navigate to the frontend directory:
