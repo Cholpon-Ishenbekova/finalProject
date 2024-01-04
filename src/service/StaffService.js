@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const BASE_URL = "http://34.239.137.242:8085/staff";
-// const BASE_URL = "http://localhost:8085/staff";
+// const BASE_URL = "http://34.239.137.242:8085/staff";
+const BASE_URL = "http://localhost:8085/staff";
 class StaffService {
     getAllStaff(){
         return axios.get(BASE_URL);
