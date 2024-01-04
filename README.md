@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# FinalOOProject - Work Tracker App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This Full Stack Project, Work Tracker App, is an implementation of the existing frontend project, "Work Time Tracker App." This project introduces a backend that includes functionalities such as managing records and staff, and providing operations for creating, updating, and deleting records and staff members.
 
-In the project directory, you can run:
+## Video Demonstration
 
-### `npm start`
+For a detailed walkthrough and demonstration, watch the [Video Demo](#) [Link to be replaced with the actual link].
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started (Frontend)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Navigate to the frontend directory:
+   ```bash
+   cd frontend
+   ```
 
-### `npm test`
+2. Start the frontend application:
+   ```bash
+   npm start
+   ```
+   
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Backend Setup
 
-### `npm run build`
+### Database
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- The project utilizes AWS RDS for database storage.
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- The backend is deployed on an EC2 instance where the JAR file is hosted.
 
-### `npm run build` fails to minify
+### Entities
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Two main entities: **Record** and **Staff**.
+- Server ports:
+  - **Staff:** [http://34.239.137.242:8085/staff](http://34.239.137.242:8085/staff)
+  - **Record:** [http://34.239.137.242:8085/record](http://34.239.137.242:8085/record)
+
+## Main Features
+
+### /staff Page
+
+- Implements CRUD operations for managing staff members.
+- Connected with Spring Boot through API and Axios.
+- ![Staff Page](https://github.com/Cholpon-Ishenbekova/finalOOProject/assets/68575387/beb6122a-aa17-4d4a-9679-c7dbf267e181)
+
+### /add-staff Page
+
+- Connects to a POST request to save new staff data.
+- Saved data is stored in the staff database (RDS) and immediately displayed on the /staff page.
+- ![Add Staff Page](https://github.com/Cholpon-Ishenbekova/finalOOProject/assets/68575387/4255cccb-a80c-428b-8eaf-0ae539db1282)
+
+### /add-record Page
+
+- Utilizes POST requests to save records and update requests (updateRecord).
+- <img width="886" alt="image" src="https://github.com/Cholpon-Ishenbekova/finalOOProject/assets/68575387/88a17890-8cd1-4d4d-880e-5bbc0f6e1e8b">
+- In Postman using aws public address
+- <img width="351" alt="image" src="https://github.com/Cholpon-Ishenbekova/finalOOProject/assets/68575387/3e43611f-0e48-45df-8dac-b3d7c08cdb3b">
+
+### /records Page
+
+- Implements CRUD operations for managing records.
+- Connected with Spring Boot through API and Axios.
+- <img width="913" alt="image" src="https://github.com/Cholpon-Ishenbekova/finalOOProject/assets/68575387/a09ff6c4-75f4-4e4f-8a22-d46af53d902b">
+
+
+### Using Postman
+1) Staff
+   ```bash
+   [post] http://34.239.137.242:8085/staff 
+   ```
+```bash
+  {
+  "firstName": "cholpon",
+  "lastName": "smth",
+  "department": "IT",
+  "email": "ermek@gmail.kg"
+
+}
+   ```
+
+
+
+<img width="873" alt="image" src="https://github.com/Cholpon-Ishenbekova/finalOOProject/assets/68575387/fb1d48ba-ff21-4fe9-9829-190d8da4da55">
+
+2) Record
+   ```bash
+   [post] http://34.239.137.242:8085/record
+   ```
+   ```bash
+      {
+        "firstName": "Bakyt",
+        "lastName": "Bakytov",
+        "status": "In",
+        "dayTime": "01/01/2022 10:30:00"
+    }```
+
+<img width="627" alt="image" src="https://github.com/Cholpon-Ishenbekova/finalOOProject/assets/68575387/b9a68b7e-eade-4c6e-a17e-60637b5f4eb2">
+
+## Conclusion
+
+This project provides a comprehensive solution for tracking work-related data, managing staff, and maintaining records efficiently. The integration of frontend and backend components enhances the overall user experience, providing seamless interactions with the application.
