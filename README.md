@@ -6,6 +6,8 @@ This Full Stack Project, Work Tracker App, is an implementation of the existing 
 
 ## Getting Started (Frontend)
 
+Note! unfottunately, I couldn't deploy React Build file together with db to AWS, so that's why it doesn't work indepedently, you should run spring boot application together.
+
 1. Navigate to the frontend directory:
    ```bash
    cd frontend
