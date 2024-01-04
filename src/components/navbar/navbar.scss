@@ -1,0 +1,35 @@
+.navbar {
+    height: 50px;
+    border-bottom: 0.5px solid rgb(231, 228, 228);
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #000;
+
+    .wrapper {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+
+        .items{
+            display: flex;
+            align-items: center;
+
+            .item {
+                display: flex;
+                align-items: center;
+                margin-right: 50px;
+
+                &:hover{
+                    padding: 3px 8px;
+                    border-radius: 5px;
+                    color: #000;
+                    background-color: rgba(155, 205, 255, 0.126);
+                }
+            }
+            
+        }
+     }
+}
